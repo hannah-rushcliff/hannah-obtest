@@ -1,0 +1,732 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Willow Health Clinic | Your Health, Our Priority</title>
+
+    <meta name="description" content="Welcome to Willow Health Clinic. Explore our treatments and book your appointment online.">
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PBPNW427"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #f7eee0;
+            --accent: #d29b67;
+            --accent-dark: #b77e4d;
+            --dark: #34332f;
+            --text: #62605a;
+            --white: #ffffff;
+            --light: #fcfaf6;
+            --border: #e9dfd2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--accent-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-dark);
+        }
+
+        .nav-links .nav-button {
+            background: var(--accent);
+            color: var(--white);
+            padding: 11px 22px;
+            border-radius: 5px;
+        }
+
+        .nav-links .nav-button:hover {
+            background: var(--accent-dark);
+            color: var(--white);
+        }
+
+        /* Hero */
+
+        .hero {
+            background: var(--primary);
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 570px;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .button:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent-dark);
+        }
+
+        .button-outline:hover {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* General Sections */
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(32px, 4vw, 43px);
+            margin-bottom: 16px;
+        }
+
+        .section-heading p {
+            font-size: 15px;
+        }
+
+        /* Treatments */
+
+        .treatments {
+            background: var(--white);
+        }
+
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .treatment-card {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 32px 26px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        .treatment-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: var(--accent-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            margin-bottom: 22px;
+        }
+
+        .treatment-card h3 {
+            font-size: 23px;
+            margin-bottom: 13px;
+        }
+
+        .treatment-card p {
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .price {
+            color: var(--accent-dark);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .price small {
+            color: var(--text);
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        /* About */
+
+        .about {
+            background: var(--primary);
+        }
+
+        .about-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 38px;
+            margin-bottom: 22px;
+        }
+
+        /* Booking */
+
+        .booking {
+            background: var(--light);
+            scroll-margin-top: 76px;
+        }
+
+        .booking-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            min-height: 900px;
+            box-shadow: 0 8px 35px rgba(0,0,0,0.04);
+        }
+
+        .booking-card h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .booking-intro {
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .booking-embed {
+            width: 100%;
+            min-height: 900px;
+        }
+
+        .booking-embed iframe {
+            width: 100% !important;
+            border: none !important;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: var(--primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 25px;
+        }
+
+        .contact-item h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            font-size: 14px;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        footer {
+            background: var(--dark);
+            color: #e8e1d8;
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        footer .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+            .treatment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-inner {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .nav-links .nav-button {
+                padding: 8px 13px;
+            }
+
+            .treatment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .booking-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a href="#home" class="logo">
+                Willow <span>Health</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#treatments">Treatments</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="#book" class="nav-button">
+                            Book online
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <span class="eyebrow">
+                Welcome to Willow Health Clinic
+            </span>
+
+            <h1>
+                Feel better.<br>
+                Live better.
+            </h1>
+
+            <p>
+                Your health and wellbeing are at the heart of everything
+                we do. Our friendly team is here to help you feel your best
+                with personalised care and professional treatments.
+            </p>
+
+            <a href="#book" class="button">
+                Book online
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Treatments -->
+
+    <section class="treatments" id="treatments">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Our Services</span>
+
+                <h2>How we can help you</h2>
+
+                <p>
+                    We offer a range of professional treatments
+                    designed around your individual health and
+                    wellbeing needs.
+                </p>
+            </div>
+
+            <div class="treatment-grid">
+
+                <article class="treatment-card">
+
+                    <div class="treatment-icon">✦</div>
+
+                    <h3>Physiotherapy</h3>
+
+                    <p>
+                        Personalised treatment to help improve mobility,
+                        manage pain and support your recovery.
+                    </p>
+
+                    <div class="price">
+                        £55 <small>/ appointment</small>
+                    </div>
+
+                    <a href="#book" class="button button-outline">
+                        Book online
+                    </a>
+
+                </article>
+
+
+                <article class="treatment-card">
+
+                    <div class="treatment-icon">♡</div>
+
+                    <h3>Podiatry</h3>
+
+                    <p>
+                        Professional foot care and advice to help
+                        maintain healthy, comfortable feet.
+                    </p>
+
+                    <div class="price">
+                        £45 <small>/ appointment</small>
+                    </div>
+
+                    <a href="#book" class="button button-outline">
+                        Book online
+                    </a>
+
+                </article>
+
+
+                <article class="treatment-card">
+
+                    <div class="treatment-icon">✧</div>
+
+                    <h3>Osteopathy</h3>
+
+                    <p>
+                        Hands-on treatment and tailored advice
+                        to support movement and physical wellbeing.
+                    </p>
+
+                    <div class="price">
+                        £60 <small>/ appointment</small>
+                    </div>
+
+                    <a href="#book" class="button button-outline">
+                        Book online
+                    </a>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about" id="about">
+        <div class="container about-content">
+
+            <span class="eyebrow">
+                Your Local Healthcare Clinic
+            </span>
+
+            <h2>Care that puts you first</h2>
+
+            <p>
+                At Willow Health Clinic, we believe everyone deserves
+                friendly, professional and personalised healthcare.
+                We take the time to understand your needs and help
+                you find the right treatment for you.
+            </p>
+
+            <br>
+
+            <p>
+                Our aim is to make accessing healthcare simple,
+                comfortable and convenient.
+            </p>
+
+            <br>
+
+            <a href="#book" class="button">
+                Book online
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Online Booking -->
+
+    <section class="booking" id="book">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">
+                    Online Appointments
+                </span>
+
+                <h2>Book your appointment</h2>
+
+                <p>
+                    Use our online booking system below to explore
+                    available appointments and arrange your visit.
+                </p>
+            </div>
+
+            <div class="booking-card">
+
+                <h2>Online Booking</h2>
+
+                <p class="booking-intro">
+                    Select your preferred treatment and appointment
+                    using our online booking system.
+                </p>
+
+                <!-- Booking embed: included once only -->
+
+                <div class="booking-embed">
+                    <script src="https://bookings.rushcliff.com/ob-embed.js" data-system="445955" data-analytics="gtm"></script>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">
+                    Get In Touch
+                </span>
+
+                <h2>We'd love to hear from you</h2>
+
+                <p>
+                    Have a question? Get in touch with our friendly
+                    team using the details below.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-item">
+                    <h3>Visit Us</h3>
+                    <p>
+                        25 Willow Lane<br>
+                        Derby<br>
+                        DE1 2AB
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Call Us</h3>
+                    <p>
+                        <a href="tel:01234567890">
+                            01234 567890
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Email Us</h3>
+                    <p>
+                        <a href="mailto:hello@example.com">
+                            hello@example.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-logo">
+                Willow Health Clinic
+            </div>
+
+            <p>
+                © 2026 Willow Health Clinic. All rights reserved.
+            </p>
+
+            <p>
+                This is a fictional clinic website created
+                for online booking and analytics testing only.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
